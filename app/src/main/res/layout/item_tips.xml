@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="5dp"
+    app:cardCornerRadius="4dp"
+    android:background="@color/cream">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@color/cream">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:orientation="horizontal"
+            android:background="@color/cream">
+
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="286dp"
+                android:layout_height="68dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Judul"
+                android:textColor="@color/hijau"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif"
+                android:text="lorem ipsum blablablabla"
+                android:textSize="20sp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

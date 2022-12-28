@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842417598248",
+    "project_id": "my-scale-apk",
+    "storage_bucket": "my-scale-apk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842417598248:android:188df10a8069d3f0922a1d",
+        "android_client_info": {
+          "package_name": "com.example.myscaleapk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842417598248-qh507qqh0401thp2eq7cvhsgae3kmik1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFTM9Il5yD-zg23oIojb9jhgDkQhBVjss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842417598248-qh507qqh0401thp2eq7cvhsgae3kmik1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

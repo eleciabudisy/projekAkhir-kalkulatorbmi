@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyScale</string>
+    <string name="unit">Cm</string>
+    <string name="femaletext">Perempuan</string>
+    <string name="age">Umur</string>
+    <string name="startingheight">170</string>
+    <string name="startingweight">55</string>
+    <string name="startingage">22</string>
+    <string name="todo">TODO</string>
+    <string name="height">Tinggi</string>
+    <string name="calculate_your_bmi">Hitung BMI</string>
+    <string name="weight">Berat</string>
+    <string name="male">Laki-Laki</string>
+    <string name="gender">Laki-Laki Perempuan</string>
+    <string name="sharedKey">MyScaleKeyNEW</string>
+    <string name="bmi_key">qwertyuiop</string>
+
+</resources>
