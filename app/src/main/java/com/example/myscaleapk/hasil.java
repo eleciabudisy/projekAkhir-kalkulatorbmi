@@ -30,6 +30,7 @@ public class hasil extends AppCompatActivity {
     Button mlogout;
     Intent intent;
     String namaUser;
+    SharedPreferences pref;
 
     ImageView mimageview;
     String mbmi;
@@ -70,8 +71,18 @@ public class hasil extends AppCompatActivity {
         mheightdisplay=findViewById(R.id.heightdisplay);
         mbackground=findViewById(R.id.contentlayout);
 
-        height=intent.getStringExtra("height");
-        weight=intent.getStringExtra("weight");
+        pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
+        String age = pref.getString("AGE", null);
+        String height = pref.getString("HEIGHT", null);
+        String weight = pref.getString("WEIGHT", null);
+        if (age != null || height != null || weight != null){
+            magedisplay.setText(age+" th");
+            mheightdisplay.setText(height+" cm");
+            mweightdisplay.setText(weight+" kg");
+        }
+
+        /*height=intent.getStringExtra("height");
+        weight=intent.getStringExtra("weight");*/
 
 
         intheight=Float.parseFloat(height);
@@ -128,9 +139,9 @@ public class hasil extends AppCompatActivity {
             mimageview.setImageResource(R.drawable.crosss);
         }
 
-        magedisplay.setText(intent.getStringExtra("age")+" th");
+        /*magedisplay.setText(intent.getStringExtra("age")+" th");
         mheightdisplay.setText(intent.getStringExtra("height")+" cm");
-        mweightdisplay.setText(intent.getStringExtra("weight")+" kg");
+        mweightdisplay.setText(intent.getStringExtra("weight")+" kg");*/
         mbmidisplay.setText(mbmi);
 
         mtips.setOnClickListener(new View.OnClickListener() {

@@ -172,12 +172,19 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
-                    hitungDataPref(mcurrentage.getText().toString().trim(),mcurrentheight.getText().toString().trim(), mcurrentweight.getText().toString().trim());
+                    /*hitungDataPref(mcurrentage.getText().toString().trim(),mcurrentheight.getText().toString().trim(), mcurrentweight.getText().toString().trim());
+*/
 
+                    SharedPreferences pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
+                    SharedPreferences.Editor myEdit = pref.edit();
+                    myEdit.putString("AGE", mcurrentage.getText().toString());
+                    myEdit.putString("HEIGHT", mcurrentheight.getText().toString());
+                    myEdit.putString("WEIGHT", mcurrentweight.getText().toString());
+                    myEdit.apply();
                     Intent intent = new Intent(MainActivity.this, hasil.class);
-                    intent.putExtra("height", mintprogress);
+                    /*intent.putExtra("height", mintprogress);
                     intent.putExtra("weight", weight2);
-                    intent.putExtra("age", age2);
+                    intent.putExtra("age", age2);*/
                     startActivity(intent);
 
 
@@ -191,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void hitungDataPref(String age, String height, String weight) {
+    /*private void hitungDataPref(String age, String height, String weight) {
 
         SharedPreferences pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
         SharedPreferences.Editor myEdit = pref.edit();
@@ -199,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
         myEdit.putString("HEIGHT", height+"cm");
         myEdit.putString("WEIGHT", weight+"kg");
         myEdit.apply();
-    }
+    }*/
 
 
 
