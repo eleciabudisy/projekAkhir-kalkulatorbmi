@@ -48,6 +48,19 @@
 
 
         <TextView
+            android:id="@+id/genderdisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:text="Gender"
+            android:layout_below="@id/bmidisplay"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/agedisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,25 +68,8 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="15dp"
             android:text="Age"
+            android:layout_toRightOf="@id/genderdisplay"
             android:layout_below="@id/bmidisplay"
-            android:layout_toLeftOf="@id/weightdisplay"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/heightdisplay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bmidisplay"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="133dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginRight="-53dp"
-            android:layout_toRightOf="@id/weightdisplay"
-            android:text="Height"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -82,21 +78,36 @@
             android:id="@+id/weightdisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bmidisplay"
-            android:layout_centerInParent="true"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="106dp"
-            android:layout_marginTop="17dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
             android:text="Weight"
+            android:layout_toRightOf="@id/agedisplay"
+            android:layout_below="@id/bmidisplay"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/heightdisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:text="Height"
+            android:layout_toRightOf="@id/weightdisplay"
+            android:layout_below="@id/bmidisplay"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
             android:id="@+id/bmicategorydispaly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/weightdisplay"
+            android:layout_below="@id/genderdisplay"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:fontFamily="sans-serif-black"
@@ -113,7 +124,7 @@
     <android.widget.Button
         android:id="@+id/tips"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_below="@id/contentlayout"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
@@ -130,7 +141,7 @@
     <android.widget.Button
         android:id="@+id/gotomain"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/tips"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
@@ -140,13 +151,12 @@
         android:text="HITUNG BMI LAGI"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold">
-    </android.widget.Button>
+        android:textStyle="bold"></android.widget.Button>
 
     <android.widget.Button
         android:id="@+id/logout"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/gotomain"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"

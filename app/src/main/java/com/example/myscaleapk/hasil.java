@@ -24,21 +24,16 @@ public class hasil extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
-    TextView mbmidisplay,magedisplay,mweightdisplay,mheightdisplay,mbmicategory,mgender;
+    TextView mbmidisplay,magedisplay,mweightdisplay,mheightdisplay,mbmicategory,mgenderdisplay;
     Button mgotomain;
     Button mtips;
     Button mlogout;
     Intent intent;
-    String namaUser;
     SharedPreferences pref;
 
     ImageView mimageview;
     String mbmi;
-    String cateogory;
     float intbmi;
-
-    String height;
-    String weight;
 
     float intheight,intweight;
 
@@ -61,6 +56,7 @@ public class hasil extends AppCompatActivity {
         mbmidisplay=findViewById(R.id.bmidisplay);
         magedisplay=findViewById(R.id.agedisplay);
         mweightdisplay=findViewById(R.id.weightdisplay);
+        mgenderdisplay = findViewById(R.id.genderdisplay);
         mbmicategory = findViewById(R.id.bmicategorydispaly);
         mtips = findViewById(R.id.tips);
         mgotomain=findViewById(R.id.gotomain);
@@ -72,17 +68,16 @@ public class hasil extends AppCompatActivity {
         mbackground=findViewById(R.id.contentlayout);
 
         pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
+        String gender = pref.getString("GENDER", null);
         String age = pref.getString("AGE", null);
         String height = pref.getString("HEIGHT", null);
         String weight = pref.getString("WEIGHT", null);
-        if (age != null || height != null || weight != null){
+        if (gender!= null || age != null || height != null || weight != null){
+            mgenderdisplay.setText(gender);
             magedisplay.setText(age+" th");
             mheightdisplay.setText(height+" cm");
             mweightdisplay.setText(weight+" kg");
         }
-
-        /*height=intent.getStringExtra("height");
-        weight=intent.getStringExtra("weight");*/
 
 
         intheight=Float.parseFloat(height);
@@ -139,9 +134,6 @@ public class hasil extends AppCompatActivity {
             mimageview.setImageResource(R.drawable.crosss);
         }
 
-        /*magedisplay.setText(intent.getStringExtra("age")+" th");
-        mheightdisplay.setText(intent.getStringExtra("height")+" cm");
-        mweightdisplay.setText(intent.getStringExtra("weight")+" kg");*/
         mbmidisplay.setText(mbmi);
 
         mtips.setOnClickListener(new View.OnClickListener() {

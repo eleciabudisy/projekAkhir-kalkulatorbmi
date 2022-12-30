@@ -20,6 +20,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -172,22 +173,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
-                    /*hitungDataPref(mcurrentage.getText().toString().trim(),mcurrentheight.getText().toString().trim(), mcurrentweight.getText().toString().trim());
-*/
-
                     SharedPreferences pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
                     SharedPreferences.Editor myEdit = pref.edit();
+                    myEdit.putString("GENDER", typerofuser);
                     myEdit.putString("AGE", mcurrentage.getText().toString());
                     myEdit.putString("HEIGHT", mcurrentheight.getText().toString());
                     myEdit.putString("WEIGHT", mcurrentweight.getText().toString());
                     myEdit.apply();
                     Intent intent = new Intent(MainActivity.this, hasil.class);
-                    /*intent.putExtra("height", mintprogress);
-                    intent.putExtra("weight", weight2);
-                    intent.putExtra("age", age2);*/
                     startActivity(intent);
-
-
 
                 }
 
@@ -197,18 +191,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    /*private void hitungDataPref(String age, String height, String weight) {
-
-        SharedPreferences pref = getSharedPreferences("MyScalePref", MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = pref.edit();
-        myEdit.putString("AGE", age+"th");
-        myEdit.putString("HEIGHT", height+"cm");
-        myEdit.putString("WEIGHT", weight+"kg");
-        myEdit.apply();
-    }*/
-
-
-
 
 }
